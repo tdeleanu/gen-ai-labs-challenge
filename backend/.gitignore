@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+coverage/
+.vscode/
+.idea/
+
+# Database
+*.db
+*.db-journal
+prisma/*.db
+prisma/*.db-journal
+
+# Deployment script (keep private)
+deploy-manual.sh

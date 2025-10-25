@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id             String   @id @default(uuid())
+  createdAt      DateTime @default(now()) @map("created_at")
+  lastAccessedAt DateTime @updatedAt @map("last_accessed_at")
+
+  @@map("sessions")
+}
+
+model Experiment {
+  id         String     @id @default(uuid())
+  sessionId  String     @map("session_id")
+  prompt     String
+  createdAt  DateTime   @default(now()) @map("created_at")
+  responses  Response[]
+
+  @@map("experiments")
+}
+
+model Response {
+  id                   String     @id @default(uuid())
+  experimentId         String     @map("experiment_id")
+  text                 String
+  temperature          Float
+  topP                 Float      @map("top_p")
+  maxTokens            Int        @map("max_tokens")
+  tokensUsed           Int        @map("tokens_used")
+  latencyMs            Int        @map("latency_ms")
+  metricsOverall       Float      @map("metrics_overall")
+  metricsLength        Float      @map("metrics_length")
+  metricsCoherence     Float      @map("metrics_coherence")
+  metricsStructure     Float      @map("metrics_structure")
+  metricsReadability   Float      @map("metrics_readability")
+  metricsCompleteness  Float      @map("metrics_completeness")
+  metricsSpecificity   Float      @map("metrics_specificity")
+  createdAt            DateTime   @default(now()) @map("created_at")
+  experiment           Experiment @relation(fields: [experimentId], references: [id], onDelete: Cascade)
+
+  @@map("responses")
+}
