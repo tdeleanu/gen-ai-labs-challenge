@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#3b82f6" rx="64"/>
+
+  <!-- Lab beaker/flask outline -->
+  <path d="M210 130 L210 210 L160 320 Q160 345 185 345 L327 345 Q352 345 352 320 L302 210 L302 130 Z"
+        fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Liquid in flask -->
+  <path d="M170 305 Q170 325 190 325 L322 325 Q342 325 342 305 L302 225 L210 225 Z"
+        fill="#60a5fa" opacity="0.8"/>
+
+  <!-- Binary code bubbles -->
+  <circle cx="225" cy="265" r="8" fill="#ffffff" opacity="0.9"/>
+  <circle cx="256" cy="250" r="7" fill="#ffffff" opacity="0.9"/>
+  <circle cx="287" cy="265" r="8" fill="#ffffff" opacity="0.9"/>
+  <circle cx="240" cy="285" r="6" fill="#ffffff" opacity="0.9"/>
+  <circle cx="272" cy="280" r="7" fill="#ffffff" opacity="0.9"/>
+  <circle cx="256" cy="295" r="5" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Terminal cursor line at top -->
+  <rect x="225" y="145" width="62" height="12" fill="#ffffff" rx="6"/>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <!-- Background -->
+  <rect width="192" height="192" fill="#3b82f6" rx="24"/>
+
+  <!-- Lab beaker/flask outline -->
+  <path d="M80 50 L80 80 L60 120 Q60 130 70 130 L122 130 Q132 130 132 120 L112 80 L112 50 Z"
+        fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Liquid in flask -->
+  <path d="M64 115 Q64 122 72 122 L120 122 Q128 122 128 115 L112 85 L80 85 Z"
+        fill="#60a5fa" opacity="0.8"/>
+
+  <!-- Binary code bubbles -->
+  <circle cx="85" cy="100" r="3" fill="#ffffff" opacity="0.9"/>
+  <circle cx="96" cy="95" r="2.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="107" cy="100" r="3" fill="#ffffff" opacity="0.9"/>
+  <circle cx="91" cy="108" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="102" cy="106" r="2.5" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Terminal cursor line at top -->
+  <rect x="85" y="55" width="22" height="4" fill="#ffffff" rx="2"/>
+</svg>
