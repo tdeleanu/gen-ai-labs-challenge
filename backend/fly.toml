@@ -1,0 +1,66 @@
+# fly.toml app configuration file generated for gal-challenge-backend on 2025-10-24T16:27:25+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'gal-challenge-backend'
+primary_region = 'fra'
+kill_signal = 'SIGINT'
+kill_timeout = '5s'
+
+[experimental]
+  auto_rollback = true
+
+[build]
+  dockerfile = 'Dockerfile'
+
+[env]
+  LOG_LEVEL = 'info'
+  NODE_ENV = 'production'
+  PORT = '5001'
+
+[mounts]
+  source = "gal_challenge_data"
+  destination = "/data"
+  initial_size = "1gb"
+
+[[services]]
+  protocol = 'tcp'
+  internal_port = 5001
+  processes = ['app']
+
+  [[services.ports]]
+    port = 80
+    handlers = ['http']
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ['tls', 'http']
+
+  [services.concurrency]
+    type = 'connections'
+    hard_limit = 25
+    soft_limit = 20
+
+  [[services.tcp_checks]]
+    interval = '15s'
+    timeout = '2s'
+    grace_period = '1s'
+
+  [[services.http_checks]]
+    interval = '30s'
+    timeout = '10s'
+    grace_period = '5s'
+    method = 'GET'
+    path = '/health'
+    protocol = 'http'
+    tls_skip_verify = false
+
+    [services.http_checks.headers]
+      User-Agent = 'Fly Health Check'
+
+[[vm]]
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 512
