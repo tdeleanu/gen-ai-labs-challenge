@@ -79,7 +79,7 @@ So the app sticks to what works: **temperature**, **top_p**, and **max tokens**.
 
 ## Demo Video
 
-[Coming soon]
+ https://youtu.be/KLRNkOMLWUQ
 
 ---
 
