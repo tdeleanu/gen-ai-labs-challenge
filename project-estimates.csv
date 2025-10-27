@@ -19,8 +19,9 @@ LLM Lab - AI Response Quality Analyzer;Testing - Manual QA and Cross-Browser;0.5
 LLM Lab - AI Response Quality Analyzer;Code Quality and Refactoring;0.25;0.5;0.5;TypeScript fixes code review cleanup remove unused code (included throughout)
 LLM Lab - AI Response Quality Analyzer;Documentation - Comprehensive Project Docs;0.5;1.5;2;Root README backend/frontend docs metrics rationale API docs design decisions
 LLM Lab - AI Response Quality Analyzer;Deployment - Backend and Frontend;0.5;1.5;1.5;Fly.io backend Vercel frontend env config production testing
-LLM Lab - AI Response Quality Analyzer;Demo Video - Script Research and Recording;1;2;;Plan script record walkthrough explain metrics discuss technical decisions
-LLM Lab - AI Response Quality Analyzer;Demo Video - Editing and Publishing;0.5;1;;Edit trim add captions upload to YouTube/Loom
-LLM Lab - AI Response Quality Analyzer;Final QA and Submission;0.5;1;;Final testing verify requirements prepare submission package
-LLM Lab - AI Response Quality Analyzer;Contingency - Buffer for Unknowns;0.5;1;;Technical issues deployment problems video retakes scope refinement
+LLM Lab - AI Response Quality Analyzer;Demo Video - Script Research and Recording;1;2;0.5;Plan script record walkthrough explain metrics discuss technical decisions
+LLM Lab - AI Response Quality Analyzer;Demo Video - Editing and Publishing;0.5;1;0.5;Edit trim add captions upload to YouTube/Loom
+LLM Lab - AI Response Quality Analyzer;Final QA and Submission;0.5;1;0.5;Final testing verify requirements prepare submission package
+LLM Lab - AI Response Quality Analyzer;Contingency - Buffer for Unknowns;0.5;1;0.5;Technical issues deployment problems video retakes scope refinement
+
 LLM Lab - AI Response Quality Analyzer;ACTUAL TOTAL TIME SPENT;;;20;Real time logged from start to current state (includes all completed work above)
